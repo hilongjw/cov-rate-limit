@@ -1,6 +1,6 @@
-#  Express Rate Limit
+#  Cov Rate Limit
 
-A lightweight Rate limiter middleware  for Express and Koa. Use to limit repeated requests to public APIs and/or endpoints such as password reset.
+A lightweight Rate limiter middleware for Express and Koa. Use to limit repeated requests to public APIs.
 
 ## Install
 
