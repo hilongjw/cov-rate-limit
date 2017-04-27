@@ -1,0 +1,42 @@
+{
+  "name": "cov-rate-limit",
+  "version": "0.1.0",
+  "description": "rate-limiting middleware for Express and Koa",
+  "main": "src/index.js",
+  "homepage": "",
+  "scripts": {
+    "dev": "supervisor -w src,bench bench/app",
+    "koa": "supervisor -w src,bench bench/koa",
+    "test": "mocha test/*.js"
+  },
+  "author": {
+    "name": "Awe",
+    "email": "hilongjw@gmail.com"
+  },
+  "keywords": [
+    "express-rate-limit",
+    "express",
+    "koa-rate-limit",
+    "koa",
+    "rate",
+    "limit",
+    "ratelimit",
+    "rate-limit",
+    "middleware",
+    "ip",
+    "auth",
+    "authorization",
+    "security",
+    "brute",
+    "force",
+    "bruteforce",
+    "brute-force",
+    "attack"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "koa-router": "^7.1.1",
+    "supertest": "^3.0.0"
+  }
+}
