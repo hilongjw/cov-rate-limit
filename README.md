@@ -92,4 +92,4 @@ app.get('/api1', rateLimiter, (req, res) => {
 
 MIT © [Awe](https://github.com/hilongjw)
 
-inspiration by code [express-rate-limit](https://github.com/nfriedly/express-rate-limit)
+inspiration by [express-rate-limit](https://github.com/nfriedly/express-rate-limit)
