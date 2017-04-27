@@ -1,9 +1,7 @@
 const express = require('express')
 const RateLimit = require('../src')
-const OldRateLimit = require('express-rate-limit');
-const LRU = require('lru-cache')
-const Redis = require('redis');
-const redis = Redis.createClient();
+const Redis = require('redis')
+const redis = Redis.createClient()
 
 const cache = LRU({ max: 1024 * 1024 * 50 })
 
@@ -15,15 +13,6 @@ const rateLimiter = RateLimit({
     //     return Math.floor(Math.random() * 200)
     // },
     cache: redis
-})
-
-const limiter = new OldRateLimit({
-    windowMs: 1000 * 60 * 15,
-    max: Number.MAX_SAFE_INTEGER,
-    delayMs: 0,
-    keyGenerator (req) {
-        return Math.floor(Math.random() * 200)
-    }
 })
 
 const app = express()
@@ -46,8 +35,6 @@ function sender (req, res) {
 }
 
 app.get('/api1', rateLimiter, sender)
-
-app.get('/api2', limiter, sender)
 
 app.get('/api3', sender)
 
